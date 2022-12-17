@@ -73,13 +73,11 @@ def main():
         print(
             f'Cadena de texto en binario: {bin(string_binary >> POLYNOMIAL["size"])}')
         print(f'Código CRC: {bin(code_crc)}')
-
+        print('-----------------------------------')
         # Verificar la cadena y el código CRC
         if verify(string_binary, POLYNOMIAL['polynomial'], code_crc):
-            print('-----------------------------------')
             print('La cadena es correcta')
         else:
-            print('-----------------------------------')
             print('La cadena es incorrecta')
 
         os.system('pause')
